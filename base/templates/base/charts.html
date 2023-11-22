@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+<h1>Charts</h1> 
+
+<form method="GET" action = "{% url 'chartsview' %}">
+	{{ form.as_p}}
+	<button>Submit</button>
+
+{{ chart|safe }}
+
+
+{% endblock content %}

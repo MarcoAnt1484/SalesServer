@@ -1,0 +1,55 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+<h1>Tables</h1> 
+
+<form method="GET" action = "{% url 'tablesview' %}">
+	{{ form.as_p}}
+	<button>Submit</button>
+
+	<table>
+		<thead>
+			<tr>
+				<th>
+					Day
+				</th>
+				<th>
+					id
+				</th>
+				<th>
+					ProductID
+				</th>
+				<th>
+					Name
+				</th>
+				<th>
+					Amount
+				</th>
+				<th>
+					Cost
+				</th>
+				<th>
+					Total
+				</th>
+			</tr>
+				
+		</thead>
+
+
+
+
+		{% for sale in data %}
+		<tr>
+			{% for element in sale %}
+			<td>
+				{{element}}
+			</td>
+			{% endfor %}
+		</tr>
+		{% endfor %}
+	</table>
+
+
+
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+<h1>Sales Report</h1> 
+
+<div>
+
+	<p><a href="{% url 'sales-form' %}">Make a Sale</a></p>
+	<p><a href="{% url 'inventory-form' %}">Add Inventory</a></p>
+	<p><a href="{% url 'products-form' %}">Add a Product</a></p>
+	<p><a href="{% url 'chartsview' %}">View Charts</a></p>
+	<p><a href="{% url 'tablesview' %}">View Tables</a></p>
+	<p><a href="{% url 'dSalesReport' %}" download>Download Sales report</a></p>
+	<p><a href="{% url 'dInventoryReport' %}" download>Download Inventory report</a></p>
+	<p><a href="{% url 'resetButton' %}">Reset Databases</a></p>
+
+</div>
+
+
+{% endblock content %}
